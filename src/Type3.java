@@ -1,4 +1,4 @@
-public class Type3 implements Visitable{
+public class Type3 extends Visitable{
 
     private String id;
 
@@ -6,6 +6,7 @@ public class Type3 implements Visitable{
         this.id = id;
     }
 
+    @Override
     public String getId() {
         return id;
     }
@@ -14,4 +15,16 @@ public class Type3 implements Visitable{
     public String accept(Visitor v) {
         return v.visit(this);
     }
+
+    @Override
+    public double getVal() {
+        return 50000;
+    }
+
+    @Override
+    public double getCostFactorSchool() {
+        return 0.009;
+    }
+
+
 }
